@@ -1,7 +1,11 @@
 import 'package:flame/game.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:time_run/time_run.dart';
 
 void main() {
-  final game = FlameGame();
-  runApp(GameWidget(game: game));
+  runApp(
+    const GameWidget<TimeRunGame>.controlled(
+      gameFactory: TimeRunGame.new,
+    ),
+  );
 }
